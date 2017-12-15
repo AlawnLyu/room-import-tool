@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>导入房型信息</title>
+</head>
+<body>
+<form id="form_table" method="post" th:action="@{/uploads}" enctype="multipart/form-data">
+    <input type="file" name="excel">
+    <input id="dialog" type="file" name="file" webkitdirectory />
+    <input type="submit">
+</form>
+<script>
+    dialog.onchange = function(e) {
+        var files = this.files;
+        var table = {};
+
+        for (var i = 0; i < files.length; i++) {
+            var f = files[i];
+            var dt = new Date(f.lastModified);
+
+            table[i] = {
+                path: f.webkitRelativePath,
+                size: f.size,
+                modified: dt.toLocaleString()
+            };
+        }
+
+        console.table(table);
+    };
+</script>
+</body>
+</html>

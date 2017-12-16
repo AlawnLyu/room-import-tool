@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 room:
   resourceLocation: D:\wamp64\www\weixinservice-dev\Upload\Reservation\
@@ -69,5 +69,5 @@ logging:
   level:
     com.wtown.util.feign.TfsRemoteService: INFO
     com.wtown.util.feign.TfsFeign: INFO
-    com.wtown.util.service.impl.RoomProductServiceImpl: DEBUG
-    com.wtown.util.controller.IndexController: DEBUG
+    com.wtown.util.service.impl.RoomProductServiceImpl: INFO
+    com.wtown.util.controller.IndexController: INFO

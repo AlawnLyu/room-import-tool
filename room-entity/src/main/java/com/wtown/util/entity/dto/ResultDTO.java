@@ -11,28 +11,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ResultDTO {
 
-    @JsonProperty("TFS_FILE_NAME")
-    private String TFS_FILE_NAME;
+    @JsonProperty(value = "TFS_FILE_NAME")
+    private String tfsFileName;
 
     public ResultDTO() {
     }
 
-    public ResultDTO(String TFS_FILE_NAME) {
-        this.TFS_FILE_NAME = TFS_FILE_NAME;
+    public ResultDTO(String tfsFileName) {
+        this.tfsFileName = tfsFileName;
     }
 
-    public void setTFS_FILE_NAME(String TFS_FILE_NAME) {
-        this.TFS_FILE_NAME = TFS_FILE_NAME;
+    public String getTfsFileName() {
+        return tfsFileName;
     }
 
-    public String getTFS_FILE_NAME() {
-        return TFS_FILE_NAME;
+    public void setTfsFileName(String tfsFileName) {
+        this.tfsFileName = tfsFileName;
     }
 
     @Override
     public String toString() {
         return "ResultDTO{" +
-                "TFS_FILE_NAME='" + TFS_FILE_NAME + '\'' +
+                "tfsFileName='" + tfsFileName + '\'' +
                 '}';
     }
 }

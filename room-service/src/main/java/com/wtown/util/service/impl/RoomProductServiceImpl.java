@@ -414,7 +414,7 @@ public class RoomProductServiceImpl implements RoomProductService {
             //还需解析返回json字符串，并组装picurls
             try {
                 ResultDTO resultDTO = jsonDataUtil.readObject(result, ResultDTO.class);
-                picurls += resultDTO.getTFS_FILE_NAME() + "|";
+                picurls += resultDTO.getTfsFileName() + "|";
             } catch (IOException e) {
                 e.printStackTrace();
             }

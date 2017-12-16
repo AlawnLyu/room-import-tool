@@ -61,11 +61,11 @@ public class IndexController {
                 logger.debug("房型代码：{}", lo.get(1));
             }
 
-            String rt_code = lo.get(1).toString();
-            Room_product roomProduct = service.getOne(rt_code);
+            String rtCode = lo.get(1).toString();
+            Room_product roomProduct = service.getOne(rtCode);
             List<MultipartFile> pic = null;
             for (int j = 0; j < imgs.size(); j++) {
-                if (imgs.get(j).getOriginalFilename().contains(rt_code)) {
+                if (imgs.get(j).getOriginalFilename().contains(rtCode)) {
                     if (pic == null) {
                         pic = new ArrayList<>();
                     }
@@ -92,8 +92,8 @@ public class IndexController {
 
     @RequestMapping("/test")
     public @ResponseBody
-    String test(String rt_code) {
-        return service.getOne(rt_code).getRt_name();
+    String test(String rtCode) {
+        return service.getOne(rtCode).getRt_name();
     }
 
     @RequestMapping("/testtfs")

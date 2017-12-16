@@ -2,8 +2,11 @@ server:
   port: 8081
 
 room:
+  #上传图片保存路径
   resourceLocation: D:\wamp64\www\weixinservice-dev\Upload\Reservation\
+  #景区代码
   scenicCode: GBHOTEL
+  #tfs服务器地址（暂时不用）
   tfsServer: http://192.168.112.132:7500
 
 spring:
@@ -50,7 +53,7 @@ spring:
       #配置StatViewServlet
       stat-view-servlet:
         login-username: admin
-        login-password: 123
+        login-password: gbsz123
       #spring监听配置
       aop-patterns: 'com.wtown.util.service.*'
 

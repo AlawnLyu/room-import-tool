@@ -70,7 +70,7 @@ public class IndexController {
                         pic = new ArrayList<>();
                     }
                     String fileSuffix = service.getSuffix(imgs.get(j).getOriginalFilename());
-                    if (".jpg".equals(fileSuffix) || ".png".equals(fileSuffix)) {
+                    if (".jpg".equals(fileSuffix.toLowerCase()) || ".png".equals(fileSuffix.toLowerCase())) {
                         pic.add(imgs.get(j));
                     }
                 }
